@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Clone Git Repo') {
+            steps {
+                bat 'git clone https://github.com/AkashKalme/JenkinsMock.git'
+            }
+        }
+        stage('Development') {
+            steps {
+                echo 'Development'
+            }
+        }
+        stage('QA') {
+            steps {
+                echo 'QA'
+            }
+        }
+        stage('Pre-pod') {
+            steps {
+                echo 'Pre Production'
+            }
+        }
+    }
+}
