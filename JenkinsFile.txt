@@ -10,9 +10,8 @@ pipeline {
         stage('Create Folder') {
             steps {
                 echo 'Create Folder'
-		bat '''mkdir PipelineFolder
-		dir'''
-            }
+		bat 'pwd'
+	     }
         }
         stage('QA') {
             steps {
