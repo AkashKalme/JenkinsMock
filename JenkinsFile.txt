@@ -12,9 +12,11 @@ pipeline {
                 bat 'git clone https://github.com/AkashKalme/JenkinsMock.git'
             }
         }
-        stage('Development') {
+        stage('Create Folder') {
             steps {
-                echo 'Development'
+                echo 'Create Folder'
+		bat '''mkdir PipelineFolder
+		dir'''
             }
         }
         stage('QA') {
