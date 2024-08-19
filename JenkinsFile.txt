@@ -7,11 +7,6 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('Clone Git Repo') {
-            steps {
-                bat 'git clone https://github.com/AkashKalme/JenkinsMock.git'
-            }
-        }
         stage('Create Folder') {
             steps {
                 echo 'Create Folder'
